@@ -1,0 +1,35 @@
+{
+  "name": "imdbapp-backend",
+  "version": "0.1.0",
+  "bin": {
+    "imdbapp-backend": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "build:layer": "env-cmd -f .env.local esbuild --bundle --platform=node --sourcemap ./node_modules/@ten24group/fw24/dist/package/layer/fw24.js --outdir=dist/layer/nodejs/node_modules/@ten24group --external:@aws-sdk",
+    "synth:local": "npm run build:layer && env-cmd -f .env.local cdk synth",
+    "deploy:local": "npm run build:layer && env-cmd -f .env.local cdk deploy",
+    "watch:local": "npm run build:layer && env-cmd -f .env.local cdk watch",
+    "destroy:local": "env-cmd -f .env.local cdk destroy"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "@types/node": "20.14.9",
+    "aws-cdk": "2.157.0",
+    "aws-cdk-lib": "^2.157.0",
+    "env-cmd": "^10.1.0",
+    "esbuild": "^0.23.1",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.5.3"
+  },
+  "dependencies": {
+    "@ten24group/fw24": "^0.1.1-alpha.12",
+    "aws-lambda": "^1.0.7",
+    "source-map-support": "^0.5.21"
+  },
+  "author": "cli24",
+  "license": "MIT"
+}
