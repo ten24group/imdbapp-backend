@@ -1,0 +1,104 @@
+[
+  {
+    "label": "Casts",
+    "icon": "appStore",
+    "key": 1,
+    "children": [
+      {
+        "label": "Cast List",
+        "key": 11,
+        "url": "/list-cast"
+      },
+      {
+        "label": "Add New Cast",
+        "key": 12,
+        "url": "/create-cast"
+      }
+    ]
+  },
+  {
+    "label": "Cast Types",
+    "icon": "appStore",
+    "key": 2,
+    "children": [
+      {
+        "label": "Cast Type List",
+        "key": 21,
+        "url": "/list-casttype"
+      },
+      {
+        "label": "Add New Cast Type",
+        "key": 22,
+        "url": "/create-casttype"
+      }
+    ]
+  },
+  {
+    "label": "Countries",
+    "icon": "appStore",
+    "key": 3,
+    "children": [
+      {
+        "label": "Country List",
+        "key": 31,
+        "url": "/list-country"
+      },
+      {
+        "label": "Add New Country",
+        "key": 32,
+        "url": "/create-country"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "icon": "appStore",
+    "key": 4,
+    "children": [
+      {
+        "label": "Genre List",
+        "key": 41,
+        "url": "/list-genre"
+      },
+      {
+        "label": "Add New Genre",
+        "key": 42,
+        "url": "/create-genre"
+      }
+    ]
+  },
+  {
+    "label": "Titles",
+    "icon": "appStore",
+    "key": 5,
+    "children": [
+      {
+        "label": "Title List",
+        "key": 51,
+        "url": "/list-title"
+      },
+      {
+        "label": "Add New Title",
+        "key": 52,
+        "url": "/create-title"
+      }
+    ]
+  },
+  {
+    "label": "Title Types",
+    "icon": "appStore",
+    "key": 6,
+    "children": [
+      {
+        "label": "Title Type List",
+        "key": 61,
+        "url": "/list-titletype"
+      },
+      {
+        "label": "Add New Title Type",
+        "key": 62,
+        "url": "/create-titletype"
+      }
+    ]
+  }
+]

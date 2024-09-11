@@ -1,0 +1,2694 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Sample App API Gateway",
+    "version" : "2024-09-11T17:18:38Z",
+    "title" : "imdbapp-backend-api"
+  },
+  "host" : "na0wdotzh8.execute-api.us-east-1.amazonaws.com",
+  "basePath" : "/v1",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/" : {
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cast" : {
+      "get" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "post" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cast/duplicate" : {
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cast/duplicate/{id}" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cast/getSignedUrlForFileUpload" : {
+      "get" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cast/query" : {
+      "post" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cast/{id}" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "delete" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      },
+      "patch" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      }
+    },
+    "/casttype" : {
+      "get" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "post" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/casttype/duplicate" : {
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/casttype/duplicate/{id}" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/casttype/getSignedUrlForFileUpload" : {
+      "get" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/casttype/query" : {
+      "post" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/casttype/{id}" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "delete" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      },
+      "patch" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      }
+    },
+    "/country" : {
+      "get" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "post" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/country/duplicate" : {
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/country/duplicate/{id}" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/country/getSignedUrlForFileUpload" : {
+      "get" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/country/query" : {
+      "post" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/country/{id}" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "delete" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      },
+      "patch" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      }
+    },
+    "/genre" : {
+      "get" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "post" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/genre/duplicate" : {
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/genre/duplicate/{id}" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/genre/getSignedUrlForFileUpload" : {
+      "get" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/genre/query" : {
+      "post" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/genre/{id}" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "delete" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      },
+      "patch" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      }
+    },
+    "/helloworld" : {
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/helloworld/error" : {
+      "get" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/helloworld/exception" : {
+      "get" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/helloworld/external" : {
+      "get" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/helloworld/headers" : {
+      "get" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/helloworld/noreturn" : {
+      "get" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/helloworld/ping" : {
+      "get" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/helloworld/post" : {
+      "post" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/helloworld/print" : {
+      "get" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mauth" : {
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mauth/addUserToGroup" : {
+      "post" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mauth/changePassword" : {
+      "post" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mauth/confirmForgotPassword" : {
+      "post" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mauth/forgotPassword" : {
+      "post" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mauth/getCredentials" : {
+      "post" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mauth/signin" : {
+      "post" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mauth/signout" : {
+      "post" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mauth/signup" : {
+      "post" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mauth/verify" : {
+      "post" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test" : {
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test/filedelete" : {
+      "post" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test/fileupload" : {
+      "post" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test/mail" : {
+      "post" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test/mailTemplate" : {
+      "post" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test/print" : {
+      "get" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test/queue" : {
+      "post" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test/secureIAM" : {
+      "get" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test/secureIAMAdmin" : {
+      "get" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test/secureIAMUser" : {
+      "get" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test/sns" : {
+      "post" : {
+        "responses" : { }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/title" : {
+      "get" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "post" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/title/duplicate" : {
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/title/duplicate/{id}" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/title/getSignedUrlForFileUpload" : {
+      "get" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/title/query" : {
+      "post" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/title/{id}" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "delete" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      },
+      "patch" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      }
+    },
+    "/titletype" : {
+      "get" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "post" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/titletype/duplicate" : {
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/titletype/duplicate/{id}" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/titletype/getSignedUrlForFileUpload" : {
+      "get" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/titletype/query" : {
+      "post" : {
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/titletype/{id}" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "delete" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "204 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Credentials" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      },
+      "patch" : {
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { },
+        "security" : [ {
+          "sigv4" : [ ]
+        } ],
+        "x-postman-meta" : {
+          "helperAttributes" : {
+            "saveHelper" : true,
+            "secretKey" : "{{aws_secret_access_key}}",
+            "accessKey" : "{{aws_access_key_id}}"
+          },
+          "headers" : "Content-Type: application/json\n",
+          "currentHelper" : "awsSigV4"
+        }
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "sigv4" : {
+      "type" : "apiKey",
+      "name" : "Authorization",
+      "in" : "header",
+      "x-amazon-apigateway-authtype" : "awsSigv4"
+    }
+  }
+}

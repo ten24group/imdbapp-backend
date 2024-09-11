@@ -1,0 +1,3058 @@
+{
+  "list-cast": {
+    "pageTitle": "Cast Listing",
+    "pageType": "list",
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Create",
+        "url": "/create-cast"
+      }
+    ],
+    "listPageConfig": {
+      "apiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "items",
+        "apiUrl": "/cast"
+      },
+      "propertiesConfig": [
+        {
+          "readOnly": true,
+          "isVisible": false,
+          "isEditable": false,
+          "isCreatable": false,
+          "isIdentifier": true,
+          "type": "string",
+          "id": "castId",
+          "name": "Cast Id",
+          "validations": [
+            "required"
+          ],
+          "isListable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "dataIndex": "castId",
+          "fieldType": "text",
+          "hidden": true,
+          "actions": [
+            {
+              "icon": "edit",
+              "url": "/edit-cast"
+            },
+            {
+              "icon": "delete",
+              "openInModal": true,
+              "modalConfig": {
+                "modalType": "confirm",
+                "modalPageConfig": {
+                  "title": "Delete Cast",
+                  "content": "Are you sure you want to delete this Cast?"
+                },
+                "apiConfig": {
+                  "apiMethod": "DELETE",
+                  "responseKey": "cast",
+                  "apiUrl": "/cast"
+                },
+                "submitSuccessRedirect": "/list-cast"
+              }
+            },
+            {
+              "icon": "view",
+              "url": "/view-cast"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "id": "castName",
+          "name": "Cast Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "dataIndex": "castName",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ]
+    }
+  },
+  "create-cast": {
+    "pageTitle": "Create Cast",
+    "pageType": "form",
+    "cardStyle": {
+      "width": "50%"
+    },
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Back",
+        "url": "/list-cast"
+      }
+    ],
+    "formPageConfig": {
+      "apiConfig": {
+        "apiMethod": "POST",
+        "responseKey": "cast",
+        "apiUrl": "/cast"
+      },
+      "formButtons": [
+        "submit",
+        "reset",
+        {
+          "text": "Cancel",
+          "url": "/list-cast"
+        }
+      ],
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "castName",
+          "name": "Cast Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Cast Name",
+          "column": "castName",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ],
+      "submitSuccessRedirect": "/list-cast"
+    }
+  },
+  "edit-cast": {
+    "pageTitle": "Update Cast",
+    "pageType": "form",
+    "cardStyle": {
+      "width": "50%"
+    },
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "icon": "copy",
+        "label": "Duplicate",
+        "openInModal": true,
+        "modalConfig": {
+          "modalType": "confirm",
+          "modalPageConfig": {
+            "title": "Duplicate Cast",
+            "content": "Are you sure you want to duplicate this Cast?"
+          },
+          "apiConfig": {
+            "apiMethod": "GET",
+            "responseKey": "cast",
+            "apiUrl": "/cast/duplicate"
+          },
+          "submitSuccessRedirect": "/list-cast"
+        }
+      },
+      {
+        "label": "Back",
+        "url": "/list-cast"
+      }
+    ],
+    "formPageConfig": {
+      "apiConfig": {
+        "apiMethod": "PATCH",
+        "responseKey": "cast",
+        "apiUrl": "/cast"
+      },
+      "detailApiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "cast",
+        "apiUrl": "/cast"
+      },
+      "formButtons": [
+        "submit",
+        "reset",
+        {
+          "text": "Cancel",
+          "url": "/list-cast"
+        }
+      ],
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "castName",
+          "name": "Cast Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Cast Name",
+          "column": "castName",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ],
+      "submitSuccessRedirect": "/list-cast"
+    }
+  },
+  "view-cast": {
+    "pageTitle": "Cast Details",
+    "pageType": "details",
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Back",
+        "url": "/list-cast"
+      }
+    ],
+    "detailsPageConfig": {
+      "detailApiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "cast",
+        "apiUrl": "/cast"
+      },
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "castName",
+          "name": "Cast Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Cast Name",
+          "column": "castName",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "readOnly": true,
+          "isCreatable": false,
+          "isEditable": false,
+          "isListable": false,
+          "type": "string",
+          "id": "createdAt",
+          "name": "Created At",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Created At",
+          "column": "createdAt",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "readOnly": true,
+          "isCreatable": false,
+          "isEditable": false,
+          "isListable": false,
+          "type": "string",
+          "id": "updatedAt",
+          "name": "Updated At",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Updated At",
+          "column": "updatedAt",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ]
+    }
+  },
+  "list-casttype": {
+    "pageTitle": "CastType Listing",
+    "pageType": "list",
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Create",
+        "url": "/create-casttype"
+      }
+    ],
+    "listPageConfig": {
+      "apiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "items",
+        "apiUrl": "/casttype"
+      },
+      "propertiesConfig": [
+        {
+          "readOnly": true,
+          "isVisible": false,
+          "isEditable": false,
+          "isCreatable": false,
+          "isIdentifier": true,
+          "type": "string",
+          "id": "castTypeId",
+          "name": "Cast Type Id",
+          "validations": [
+            "required"
+          ],
+          "isListable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "dataIndex": "castTypeId",
+          "fieldType": "text",
+          "hidden": true,
+          "actions": [
+            {
+              "icon": "edit",
+              "url": "/edit-casttype"
+            },
+            {
+              "icon": "delete",
+              "openInModal": true,
+              "modalConfig": {
+                "modalType": "confirm",
+                "modalPageConfig": {
+                  "title": "Delete CastType",
+                  "content": "Are you sure you want to delete this CastType?"
+                },
+                "apiConfig": {
+                  "apiMethod": "DELETE",
+                  "responseKey": "casttype",
+                  "apiUrl": "/casttype"
+                },
+                "submitSuccessRedirect": "/list-casttype"
+              }
+            },
+            {
+              "icon": "view",
+              "url": "/view-casttype"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "id": "castTypeName",
+          "name": "Cast Type Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "dataIndex": "castTypeName",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ]
+    }
+  },
+  "create-casttype": {
+    "pageTitle": "Create CastType",
+    "pageType": "form",
+    "cardStyle": {
+      "width": "50%"
+    },
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Back",
+        "url": "/list-casttype"
+      }
+    ],
+    "formPageConfig": {
+      "apiConfig": {
+        "apiMethod": "POST",
+        "responseKey": "castType",
+        "apiUrl": "/casttype"
+      },
+      "formButtons": [
+        "submit",
+        "reset",
+        {
+          "text": "Cancel",
+          "url": "/list-casttype"
+        }
+      ],
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "castTypeName",
+          "name": "Cast Type Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Cast Type Name",
+          "column": "castTypeName",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ],
+      "submitSuccessRedirect": "/list-casttype"
+    }
+  },
+  "edit-casttype": {
+    "pageTitle": "Update CastType",
+    "pageType": "form",
+    "cardStyle": {
+      "width": "50%"
+    },
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "icon": "copy",
+        "label": "Duplicate",
+        "openInModal": true,
+        "modalConfig": {
+          "modalType": "confirm",
+          "modalPageConfig": {
+            "title": "Duplicate CastType",
+            "content": "Are you sure you want to duplicate this CastType?"
+          },
+          "apiConfig": {
+            "apiMethod": "GET",
+            "responseKey": "casttype",
+            "apiUrl": "/casttype/duplicate"
+          },
+          "submitSuccessRedirect": "/list-casttype"
+        }
+      },
+      {
+        "label": "Back",
+        "url": "/list-casttype"
+      }
+    ],
+    "formPageConfig": {
+      "apiConfig": {
+        "apiMethod": "PATCH",
+        "responseKey": "castType",
+        "apiUrl": "/casttype"
+      },
+      "detailApiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "castType",
+        "apiUrl": "/casttype"
+      },
+      "formButtons": [
+        "submit",
+        "reset",
+        {
+          "text": "Cancel",
+          "url": "/list-casttype"
+        }
+      ],
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "castTypeName",
+          "name": "Cast Type Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Cast Type Name",
+          "column": "castTypeName",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ],
+      "submitSuccessRedirect": "/list-casttype"
+    }
+  },
+  "view-casttype": {
+    "pageTitle": "CastType Details",
+    "pageType": "details",
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Back",
+        "url": "/list-casttype"
+      }
+    ],
+    "detailsPageConfig": {
+      "detailApiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "castType",
+        "apiUrl": "/casttype"
+      },
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "castTypeName",
+          "name": "Cast Type Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Cast Type Name",
+          "column": "castTypeName",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "readOnly": true,
+          "isCreatable": false,
+          "isEditable": false,
+          "isListable": false,
+          "type": "string",
+          "id": "createdAt",
+          "name": "Created At",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Created At",
+          "column": "createdAt",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "readOnly": true,
+          "isCreatable": false,
+          "isEditable": false,
+          "isListable": false,
+          "type": "string",
+          "id": "updatedAt",
+          "name": "Updated At",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Updated At",
+          "column": "updatedAt",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ]
+    }
+  },
+  "list-country": {
+    "pageTitle": "Country Listing",
+    "pageType": "list",
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Create",
+        "url": "/create-country"
+      }
+    ],
+    "listPageConfig": {
+      "apiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "items",
+        "apiUrl": "/country"
+      },
+      "propertiesConfig": [
+        {
+          "readOnly": true,
+          "isVisible": false,
+          "isEditable": false,
+          "isCreatable": false,
+          "isIdentifier": true,
+          "type": "string",
+          "id": "countryId",
+          "name": "Country Id",
+          "validations": [
+            "required"
+          ],
+          "isListable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "dataIndex": "countryId",
+          "fieldType": "text",
+          "hidden": true,
+          "actions": [
+            {
+              "icon": "edit",
+              "url": "/edit-country"
+            },
+            {
+              "icon": "delete",
+              "openInModal": true,
+              "modalConfig": {
+                "modalType": "confirm",
+                "modalPageConfig": {
+                  "title": "Delete Country",
+                  "content": "Are you sure you want to delete this Country?"
+                },
+                "apiConfig": {
+                  "apiMethod": "DELETE",
+                  "responseKey": "country",
+                  "apiUrl": "/country"
+                },
+                "submitSuccessRedirect": "/list-country"
+              }
+            },
+            {
+              "icon": "view",
+              "url": "/view-country"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "id": "countryName",
+          "name": "Country Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "dataIndex": "countryName",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ]
+    }
+  },
+  "create-country": {
+    "pageTitle": "Create Country",
+    "pageType": "form",
+    "cardStyle": {
+      "width": "50%"
+    },
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Back",
+        "url": "/list-country"
+      }
+    ],
+    "formPageConfig": {
+      "apiConfig": {
+        "apiMethod": "POST",
+        "responseKey": "country",
+        "apiUrl": "/country"
+      },
+      "formButtons": [
+        "submit",
+        "reset",
+        {
+          "text": "Cancel",
+          "url": "/list-country"
+        }
+      ],
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "countryName",
+          "name": "Country Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Country Name",
+          "column": "countryName",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ],
+      "submitSuccessRedirect": "/list-country"
+    }
+  },
+  "edit-country": {
+    "pageTitle": "Update Country",
+    "pageType": "form",
+    "cardStyle": {
+      "width": "50%"
+    },
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "icon": "copy",
+        "label": "Duplicate",
+        "openInModal": true,
+        "modalConfig": {
+          "modalType": "confirm",
+          "modalPageConfig": {
+            "title": "Duplicate Country",
+            "content": "Are you sure you want to duplicate this Country?"
+          },
+          "apiConfig": {
+            "apiMethod": "GET",
+            "responseKey": "country",
+            "apiUrl": "/country/duplicate"
+          },
+          "submitSuccessRedirect": "/list-country"
+        }
+      },
+      {
+        "label": "Back",
+        "url": "/list-country"
+      }
+    ],
+    "formPageConfig": {
+      "apiConfig": {
+        "apiMethod": "PATCH",
+        "responseKey": "country",
+        "apiUrl": "/country"
+      },
+      "detailApiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "country",
+        "apiUrl": "/country"
+      },
+      "formButtons": [
+        "submit",
+        "reset",
+        {
+          "text": "Cancel",
+          "url": "/list-country"
+        }
+      ],
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "countryName",
+          "name": "Country Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Country Name",
+          "column": "countryName",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ],
+      "submitSuccessRedirect": "/list-country"
+    }
+  },
+  "view-country": {
+    "pageTitle": "Country Details",
+    "pageType": "details",
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Back",
+        "url": "/list-country"
+      }
+    ],
+    "detailsPageConfig": {
+      "detailApiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "country",
+        "apiUrl": "/country"
+      },
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "countryName",
+          "name": "Country Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Country Name",
+          "column": "countryName",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "readOnly": true,
+          "isCreatable": false,
+          "isEditable": false,
+          "isListable": false,
+          "type": "string",
+          "id": "createdAt",
+          "name": "Created At",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Created At",
+          "column": "createdAt",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "readOnly": true,
+          "isCreatable": false,
+          "isEditable": false,
+          "isListable": false,
+          "type": "string",
+          "id": "updatedAt",
+          "name": "Updated At",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Updated At",
+          "column": "updatedAt",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ]
+    }
+  },
+  "list-genre": {
+    "pageTitle": "Genre Listing",
+    "pageType": "list",
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Create",
+        "url": "/create-genre"
+      }
+    ],
+    "listPageConfig": {
+      "apiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "items",
+        "apiUrl": "/genre"
+      },
+      "propertiesConfig": [
+        {
+          "readOnly": true,
+          "isVisible": false,
+          "isEditable": false,
+          "isCreatable": false,
+          "isIdentifier": true,
+          "type": "string",
+          "id": "genreId",
+          "name": "Genre Id",
+          "validations": [
+            "required"
+          ],
+          "isListable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "dataIndex": "genreId",
+          "fieldType": "text",
+          "hidden": true,
+          "actions": [
+            {
+              "icon": "edit",
+              "url": "/edit-genre"
+            },
+            {
+              "icon": "delete",
+              "openInModal": true,
+              "modalConfig": {
+                "modalType": "confirm",
+                "modalPageConfig": {
+                  "title": "Delete Genre",
+                  "content": "Are you sure you want to delete this Genre?"
+                },
+                "apiConfig": {
+                  "apiMethod": "DELETE",
+                  "responseKey": "genre",
+                  "apiUrl": "/genre"
+                },
+                "submitSuccessRedirect": "/list-genre"
+              }
+            },
+            {
+              "icon": "view",
+              "url": "/view-genre"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "id": "genreName",
+          "name": "Genre Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "dataIndex": "genreName",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ]
+    }
+  },
+  "create-genre": {
+    "pageTitle": "Create Genre",
+    "pageType": "form",
+    "cardStyle": {
+      "width": "50%"
+    },
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Back",
+        "url": "/list-genre"
+      }
+    ],
+    "formPageConfig": {
+      "apiConfig": {
+        "apiMethod": "POST",
+        "responseKey": "genre",
+        "apiUrl": "/genre"
+      },
+      "formButtons": [
+        "submit",
+        "reset",
+        {
+          "text": "Cancel",
+          "url": "/list-genre"
+        }
+      ],
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "genreName",
+          "name": "Genre Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Genre Name",
+          "column": "genreName",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ],
+      "submitSuccessRedirect": "/list-genre"
+    }
+  },
+  "edit-genre": {
+    "pageTitle": "Update Genre",
+    "pageType": "form",
+    "cardStyle": {
+      "width": "50%"
+    },
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "icon": "copy",
+        "label": "Duplicate",
+        "openInModal": true,
+        "modalConfig": {
+          "modalType": "confirm",
+          "modalPageConfig": {
+            "title": "Duplicate Genre",
+            "content": "Are you sure you want to duplicate this Genre?"
+          },
+          "apiConfig": {
+            "apiMethod": "GET",
+            "responseKey": "genre",
+            "apiUrl": "/genre/duplicate"
+          },
+          "submitSuccessRedirect": "/list-genre"
+        }
+      },
+      {
+        "label": "Back",
+        "url": "/list-genre"
+      }
+    ],
+    "formPageConfig": {
+      "apiConfig": {
+        "apiMethod": "PATCH",
+        "responseKey": "genre",
+        "apiUrl": "/genre"
+      },
+      "detailApiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "genre",
+        "apiUrl": "/genre"
+      },
+      "formButtons": [
+        "submit",
+        "reset",
+        {
+          "text": "Cancel",
+          "url": "/list-genre"
+        }
+      ],
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "genreName",
+          "name": "Genre Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Genre Name",
+          "column": "genreName",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ],
+      "submitSuccessRedirect": "/list-genre"
+    }
+  },
+  "view-genre": {
+    "pageTitle": "Genre Details",
+    "pageType": "details",
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Back",
+        "url": "/list-genre"
+      }
+    ],
+    "detailsPageConfig": {
+      "detailApiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "genre",
+        "apiUrl": "/genre"
+      },
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "genreName",
+          "name": "Genre Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Genre Name",
+          "column": "genreName",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "readOnly": true,
+          "isCreatable": false,
+          "isEditable": false,
+          "isListable": false,
+          "type": "string",
+          "id": "createdAt",
+          "name": "Created At",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Created At",
+          "column": "createdAt",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "readOnly": true,
+          "isCreatable": false,
+          "isEditable": false,
+          "isListable": false,
+          "type": "string",
+          "id": "updatedAt",
+          "name": "Updated At",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Updated At",
+          "column": "updatedAt",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ]
+    }
+  },
+  "list-title": {
+    "pageTitle": "Title Listing",
+    "pageType": "list",
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Create",
+        "url": "/create-title"
+      }
+    ],
+    "listPageConfig": {
+      "apiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "items",
+        "apiUrl": "/title"
+      },
+      "propertiesConfig": [
+        {
+          "readOnly": true,
+          "isVisible": false,
+          "isEditable": false,
+          "isCreatable": false,
+          "isIdentifier": true,
+          "type": "string",
+          "id": "titleId",
+          "name": "Title Id",
+          "validations": [
+            "required"
+          ],
+          "isListable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "dataIndex": "titleId",
+          "fieldType": "text",
+          "hidden": true,
+          "actions": [
+            {
+              "icon": "edit",
+              "url": "/edit-title"
+            },
+            {
+              "icon": "delete",
+              "openInModal": true,
+              "modalConfig": {
+                "modalType": "confirm",
+                "modalPageConfig": {
+                  "title": "Delete Title",
+                  "content": "Are you sure you want to delete this Title?"
+                },
+                "apiConfig": {
+                  "apiMethod": "DELETE",
+                  "responseKey": "title",
+                  "apiUrl": "/title"
+                },
+                "submitSuccessRedirect": "/list-title"
+              }
+            },
+            {
+              "icon": "view",
+              "url": "/view-title"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "id": "titleName",
+          "name": "Title Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "dataIndex": "titleName",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "type": "string",
+          "id": "titleSummary",
+          "name": "Title Summary",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "dataIndex": "titleSummary",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "fieldType": "date",
+          "type": "string",
+          "id": "releaseDate",
+          "name": "Release Date",
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "dataIndex": "releaseDate",
+          "hidden": false
+        }
+      ]
+    }
+  },
+  "create-title": {
+    "pageTitle": "Create Title",
+    "pageType": "form",
+    "cardStyle": {
+      "width": "50%"
+    },
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Back",
+        "url": "/list-title"
+      }
+    ],
+    "formPageConfig": {
+      "apiConfig": {
+        "apiMethod": "POST",
+        "responseKey": "title",
+        "apiUrl": "/title"
+      },
+      "formButtons": [
+        "submit",
+        "reset",
+        {
+          "text": "Cancel",
+          "url": "/list-title"
+        }
+      ],
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "titleName",
+          "name": "Title Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Title Name",
+          "column": "titleName",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "type": "string",
+          "id": "titleSummary",
+          "name": "Title Summary",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Title Summary",
+          "column": "titleSummary",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "fieldType": "wysiwyg",
+          "isListable": false,
+          "type": "list",
+          "id": "storyline",
+          "name": "Storyline",
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Storyline",
+          "column": "storyline",
+          "hidden": false
+        },
+        {
+          "fieldType": "date",
+          "type": "string",
+          "id": "releaseDate",
+          "name": "Release Date",
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Release Date",
+          "column": "releaseDate",
+          "hidden": false
+        },
+        {
+          "fieldType": "select",
+          "options": {
+            "apiUrl": "/titletype",
+            "apiMethod": "GET",
+            "responseKey": "items",
+            "optionMapping": {
+              "label": "titleTypeName",
+              "value": "titleTypeId"
+            }
+          },
+          "isListable": false,
+          "type": "string",
+          "id": "titleType",
+          "name": "Title Type",
+          "relation": {
+            "type": "many-to-one",
+            "identifiers": {
+              "source": "titleType",
+              "target": "titleTypeId"
+            },
+            "entity": "titleType"
+          },
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "addNewOption": {
+            "modalType": "form",
+            "modalPageConfig": {
+              "apiConfig": {
+                "apiMethod": "POST",
+                "responseKey": "titleType",
+                "apiUrl": "/titletype"
+              },
+              "formButtons": [
+                "submit",
+                "reset"
+              ],
+              "propertiesConfig": [
+                {
+                  "type": "string",
+                  "id": "titleTypeName",
+                  "name": "Title Type Name",
+                  "validations": [
+                    "required"
+                  ],
+                  "isVisible": true,
+                  "isEditable": true,
+                  "isListable": true,
+                  "isCreatable": true,
+                  "isFilterable": true,
+                  "isSearchable": true,
+                  "label": "Title Type Name",
+                  "column": "titleTypeName",
+                  "fieldType": "text",
+                  "hidden": false
+                },
+                {
+                  "type": "string",
+                  "id": "description",
+                  "name": "Description",
+                  "validations": [
+                    "required"
+                  ],
+                  "isVisible": true,
+                  "isEditable": true,
+                  "isListable": true,
+                  "isCreatable": true,
+                  "isFilterable": true,
+                  "isSearchable": true,
+                  "label": "Description",
+                  "column": "description",
+                  "fieldType": "text",
+                  "hidden": false
+                }
+              ]
+            }
+          },
+          "label": "Title Type",
+          "column": "titleType",
+          "hidden": false
+        },
+        {
+          "fieldType": "select",
+          "options": {
+            "apiUrl": "/genre",
+            "apiMethod": "GET",
+            "responseKey": "items",
+            "optionMapping": {
+              "label": "genreName",
+              "value": "genreId"
+            }
+          },
+          "isListable": false,
+          "type": "string",
+          "id": "genre",
+          "name": "Genre",
+          "relation": {
+            "type": "many-to-one",
+            "identifiers": {
+              "source": "genre",
+              "target": "genreId"
+            },
+            "entity": "genre"
+          },
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "addNewOption": {
+            "modalType": "form",
+            "modalPageConfig": {
+              "apiConfig": {
+                "apiMethod": "POST",
+                "responseKey": "genre",
+                "apiUrl": "/genre"
+              },
+              "formButtons": [
+                "submit",
+                "reset"
+              ],
+              "propertiesConfig": [
+                {
+                  "type": "string",
+                  "id": "genreName",
+                  "name": "Genre Name",
+                  "validations": [
+                    "required"
+                  ],
+                  "isVisible": true,
+                  "isEditable": true,
+                  "isListable": true,
+                  "isCreatable": true,
+                  "isFilterable": true,
+                  "isSearchable": true,
+                  "label": "Genre Name",
+                  "column": "genreName",
+                  "fieldType": "text",
+                  "hidden": false
+                }
+              ]
+            }
+          },
+          "label": "Genre",
+          "column": "genre",
+          "hidden": false
+        },
+        {
+          "fieldType": "multi-select",
+          "options": {
+            "apiUrl": "/country",
+            "apiMethod": "GET",
+            "responseKey": "items",
+            "optionMapping": {
+              "label": "countryName",
+              "value": "countryId"
+            }
+          },
+          "isListable": false,
+          "type": "list",
+          "id": "country",
+          "name": "Country",
+          "relation": {
+            "type": "many-to-one",
+            "identifiers": {
+              "source": "country",
+              "target": "countryId"
+            },
+            "entity": "country"
+          },
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "addNewOption": {
+            "modalType": "form",
+            "modalPageConfig": {
+              "apiConfig": {
+                "apiMethod": "POST",
+                "responseKey": "country",
+                "apiUrl": "/country"
+              },
+              "formButtons": [
+                "submit",
+                "reset"
+              ],
+              "propertiesConfig": [
+                {
+                  "type": "string",
+                  "id": "countryName",
+                  "name": "Country Name",
+                  "validations": [
+                    "required"
+                  ],
+                  "isVisible": true,
+                  "isEditable": true,
+                  "isListable": true,
+                  "isCreatable": true,
+                  "isFilterable": true,
+                  "isSearchable": true,
+                  "label": "Country Name",
+                  "column": "countryName",
+                  "fieldType": "text",
+                  "hidden": false
+                }
+              ]
+            }
+          },
+          "label": "Country",
+          "column": "country",
+          "hidden": false
+        },
+        {
+          "isListable": false,
+          "type": "list",
+          "id": "casts",
+          "name": "Casts",
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "items": {
+            "type": "map",
+            "properties": [
+              {
+                "fieldType": "select",
+                "options": {
+                  "apiUrl": "/cast",
+                  "apiMethod": "GET",
+                  "responseKey": "items",
+                  "optionMapping": {
+                    "label": "castName",
+                    "value": "castId"
+                  }
+                },
+                "isListable": false,
+                "id": "cast",
+                "name": "Cast",
+                "relation": {
+                  "type": "many-to-one",
+                  "identifiers": {
+                    "source": "cast",
+                    "target": "castId"
+                  },
+                  "entity": "cast"
+                },
+                "validations": [],
+                "isVisible": true,
+                "isEditable": true,
+                "isCreatable": true,
+                "isFilterable": true,
+                "isSearchable": true,
+                "addNewOption": {
+                  "modalType": "form",
+                  "modalPageConfig": {
+                    "apiConfig": {
+                      "apiMethod": "POST",
+                      "responseKey": "cast",
+                      "apiUrl": "/cast"
+                    },
+                    "formButtons": [
+                      "submit",
+                      "reset"
+                    ],
+                    "propertiesConfig": [
+                      {
+                        "type": "string",
+                        "id": "castName",
+                        "name": "Cast Name",
+                        "validations": [
+                          "required"
+                        ],
+                        "isVisible": true,
+                        "isEditable": true,
+                        "isListable": true,
+                        "isCreatable": true,
+                        "isFilterable": true,
+                        "isSearchable": true,
+                        "label": "Cast Name",
+                        "column": "castName",
+                        "fieldType": "text",
+                        "hidden": false
+                      }
+                    ]
+                  }
+                },
+                "label": "Cast",
+                "column": "cast",
+                "hidden": false
+              },
+              {
+                "fieldType": "select",
+                "options": {
+                  "apiUrl": "/casttype",
+                  "apiMethod": "GET",
+                  "responseKey": "items",
+                  "optionMapping": {
+                    "label": "castTypeName",
+                    "value": "castTypeId"
+                  }
+                },
+                "isListable": false,
+                "id": "castType",
+                "name": "Cast Type",
+                "relation": {
+                  "type": "many-to-one",
+                  "identifiers": {
+                    "source": "castType",
+                    "target": "castTypeId"
+                  },
+                  "entity": "castType"
+                },
+                "validations": [],
+                "isVisible": true,
+                "isEditable": true,
+                "isCreatable": true,
+                "isFilterable": true,
+                "isSearchable": true,
+                "addNewOption": {
+                  "modalType": "form",
+                  "modalPageConfig": {
+                    "apiConfig": {
+                      "apiMethod": "POST",
+                      "responseKey": "castType",
+                      "apiUrl": "/casttype"
+                    },
+                    "formButtons": [
+                      "submit",
+                      "reset"
+                    ],
+                    "propertiesConfig": [
+                      {
+                        "type": "string",
+                        "id": "castTypeName",
+                        "name": "Cast Type Name",
+                        "validations": [
+                          "required"
+                        ],
+                        "isVisible": true,
+                        "isEditable": true,
+                        "isListable": true,
+                        "isCreatable": true,
+                        "isFilterable": true,
+                        "isSearchable": true,
+                        "label": "Cast Type Name",
+                        "column": "castTypeName",
+                        "fieldType": "text",
+                        "hidden": false
+                      }
+                    ]
+                  }
+                },
+                "label": "Cast Type",
+                "column": "castType",
+                "hidden": false
+              }
+            ]
+          },
+          "label": "Casts",
+          "column": "casts",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ],
+      "submitSuccessRedirect": "/list-title"
+    }
+  },
+  "edit-title": {
+    "pageTitle": "Update Title",
+    "pageType": "form",
+    "cardStyle": {
+      "width": "50%"
+    },
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "icon": "copy",
+        "label": "Duplicate",
+        "openInModal": true,
+        "modalConfig": {
+          "modalType": "confirm",
+          "modalPageConfig": {
+            "title": "Duplicate Title",
+            "content": "Are you sure you want to duplicate this Title?"
+          },
+          "apiConfig": {
+            "apiMethod": "GET",
+            "responseKey": "title",
+            "apiUrl": "/title/duplicate"
+          },
+          "submitSuccessRedirect": "/list-title"
+        }
+      },
+      {
+        "label": "Back",
+        "url": "/list-title"
+      }
+    ],
+    "formPageConfig": {
+      "apiConfig": {
+        "apiMethod": "PATCH",
+        "responseKey": "title",
+        "apiUrl": "/title"
+      },
+      "detailApiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "title",
+        "apiUrl": "/title"
+      },
+      "formButtons": [
+        "submit",
+        "reset",
+        {
+          "text": "Cancel",
+          "url": "/list-title"
+        }
+      ],
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "titleName",
+          "name": "Title Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Title Name",
+          "column": "titleName",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "type": "string",
+          "id": "titleSummary",
+          "name": "Title Summary",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Title Summary",
+          "column": "titleSummary",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "fieldType": "wysiwyg",
+          "isListable": false,
+          "type": "list",
+          "id": "storyline",
+          "name": "Storyline",
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Storyline",
+          "column": "storyline",
+          "hidden": false
+        },
+        {
+          "fieldType": "date",
+          "type": "string",
+          "id": "releaseDate",
+          "name": "Release Date",
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Release Date",
+          "column": "releaseDate",
+          "hidden": false
+        },
+        {
+          "fieldType": "select",
+          "options": {
+            "apiUrl": "/titletype",
+            "apiMethod": "GET",
+            "responseKey": "items",
+            "optionMapping": {
+              "label": "titleTypeName",
+              "value": "titleTypeId"
+            }
+          },
+          "isListable": false,
+          "type": "string",
+          "id": "titleType",
+          "name": "Title Type",
+          "relation": {
+            "type": "many-to-one",
+            "identifiers": {
+              "source": "titleType",
+              "target": "titleTypeId"
+            },
+            "entity": "titleType"
+          },
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "addNewOption": {
+            "modalType": "form",
+            "modalPageConfig": {
+              "apiConfig": {
+                "apiMethod": "POST",
+                "responseKey": "titleType",
+                "apiUrl": "/titletype"
+              },
+              "formButtons": [
+                "submit",
+                "reset"
+              ],
+              "propertiesConfig": [
+                {
+                  "type": "string",
+                  "id": "titleTypeName",
+                  "name": "Title Type Name",
+                  "validations": [
+                    "required"
+                  ],
+                  "isVisible": true,
+                  "isEditable": true,
+                  "isListable": true,
+                  "isCreatable": true,
+                  "isFilterable": true,
+                  "isSearchable": true,
+                  "label": "Title Type Name",
+                  "column": "titleTypeName",
+                  "fieldType": "text",
+                  "hidden": false
+                },
+                {
+                  "type": "string",
+                  "id": "description",
+                  "name": "Description",
+                  "validations": [
+                    "required"
+                  ],
+                  "isVisible": true,
+                  "isEditable": true,
+                  "isListable": true,
+                  "isCreatable": true,
+                  "isFilterable": true,
+                  "isSearchable": true,
+                  "label": "Description",
+                  "column": "description",
+                  "fieldType": "text",
+                  "hidden": false
+                }
+              ]
+            }
+          },
+          "label": "Title Type",
+          "column": "titleType",
+          "hidden": false
+        },
+        {
+          "fieldType": "select",
+          "options": {
+            "apiUrl": "/genre",
+            "apiMethod": "GET",
+            "responseKey": "items",
+            "optionMapping": {
+              "label": "genreName",
+              "value": "genreId"
+            }
+          },
+          "isListable": false,
+          "type": "string",
+          "id": "genre",
+          "name": "Genre",
+          "relation": {
+            "type": "many-to-one",
+            "identifiers": {
+              "source": "genre",
+              "target": "genreId"
+            },
+            "entity": "genre"
+          },
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "addNewOption": {
+            "modalType": "form",
+            "modalPageConfig": {
+              "apiConfig": {
+                "apiMethod": "POST",
+                "responseKey": "genre",
+                "apiUrl": "/genre"
+              },
+              "formButtons": [
+                "submit",
+                "reset"
+              ],
+              "propertiesConfig": [
+                {
+                  "type": "string",
+                  "id": "genreName",
+                  "name": "Genre Name",
+                  "validations": [
+                    "required"
+                  ],
+                  "isVisible": true,
+                  "isEditable": true,
+                  "isListable": true,
+                  "isCreatable": true,
+                  "isFilterable": true,
+                  "isSearchable": true,
+                  "label": "Genre Name",
+                  "column": "genreName",
+                  "fieldType": "text",
+                  "hidden": false
+                }
+              ]
+            }
+          },
+          "label": "Genre",
+          "column": "genre",
+          "hidden": false
+        },
+        {
+          "fieldType": "multi-select",
+          "options": {
+            "apiUrl": "/country",
+            "apiMethod": "GET",
+            "responseKey": "items",
+            "optionMapping": {
+              "label": "countryName",
+              "value": "countryId"
+            }
+          },
+          "isListable": false,
+          "type": "list",
+          "id": "country",
+          "name": "Country",
+          "relation": {
+            "type": "many-to-one",
+            "identifiers": {
+              "source": "country",
+              "target": "countryId"
+            },
+            "entity": "country"
+          },
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "addNewOption": {
+            "modalType": "form",
+            "modalPageConfig": {
+              "apiConfig": {
+                "apiMethod": "POST",
+                "responseKey": "country",
+                "apiUrl": "/country"
+              },
+              "formButtons": [
+                "submit",
+                "reset"
+              ],
+              "propertiesConfig": [
+                {
+                  "type": "string",
+                  "id": "countryName",
+                  "name": "Country Name",
+                  "validations": [
+                    "required"
+                  ],
+                  "isVisible": true,
+                  "isEditable": true,
+                  "isListable": true,
+                  "isCreatable": true,
+                  "isFilterable": true,
+                  "isSearchable": true,
+                  "label": "Country Name",
+                  "column": "countryName",
+                  "fieldType": "text",
+                  "hidden": false
+                }
+              ]
+            }
+          },
+          "label": "Country",
+          "column": "country",
+          "hidden": false
+        },
+        {
+          "isListable": false,
+          "type": "list",
+          "id": "casts",
+          "name": "Casts",
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "items": {
+            "type": "map",
+            "properties": [
+              {
+                "fieldType": "select",
+                "options": {
+                  "apiUrl": "/cast",
+                  "apiMethod": "GET",
+                  "responseKey": "items",
+                  "optionMapping": {
+                    "label": "castName",
+                    "value": "castId"
+                  }
+                },
+                "isListable": false,
+                "id": "cast",
+                "name": "Cast",
+                "relation": {
+                  "type": "many-to-one",
+                  "identifiers": {
+                    "source": "cast",
+                    "target": "castId"
+                  },
+                  "entity": "cast"
+                },
+                "validations": [],
+                "isVisible": true,
+                "isEditable": true,
+                "isCreatable": true,
+                "isFilterable": true,
+                "isSearchable": true,
+                "addNewOption": {
+                  "modalType": "form",
+                  "modalPageConfig": {
+                    "apiConfig": {
+                      "apiMethod": "POST",
+                      "responseKey": "cast",
+                      "apiUrl": "/cast"
+                    },
+                    "formButtons": [
+                      "submit",
+                      "reset"
+                    ],
+                    "propertiesConfig": [
+                      {
+                        "type": "string",
+                        "id": "castName",
+                        "name": "Cast Name",
+                        "validations": [
+                          "required"
+                        ],
+                        "isVisible": true,
+                        "isEditable": true,
+                        "isListable": true,
+                        "isCreatable": true,
+                        "isFilterable": true,
+                        "isSearchable": true,
+                        "label": "Cast Name",
+                        "column": "castName",
+                        "fieldType": "text",
+                        "hidden": false
+                      }
+                    ]
+                  }
+                },
+                "label": "Cast",
+                "column": "cast",
+                "hidden": false
+              },
+              {
+                "fieldType": "select",
+                "options": {
+                  "apiUrl": "/casttype",
+                  "apiMethod": "GET",
+                  "responseKey": "items",
+                  "optionMapping": {
+                    "label": "castTypeName",
+                    "value": "castTypeId"
+                  }
+                },
+                "isListable": false,
+                "id": "castType",
+                "name": "Cast Type",
+                "relation": {
+                  "type": "many-to-one",
+                  "identifiers": {
+                    "source": "castType",
+                    "target": "castTypeId"
+                  },
+                  "entity": "castType"
+                },
+                "validations": [],
+                "isVisible": true,
+                "isEditable": true,
+                "isCreatable": true,
+                "isFilterable": true,
+                "isSearchable": true,
+                "addNewOption": {
+                  "modalType": "form",
+                  "modalPageConfig": {
+                    "apiConfig": {
+                      "apiMethod": "POST",
+                      "responseKey": "castType",
+                      "apiUrl": "/casttype"
+                    },
+                    "formButtons": [
+                      "submit",
+                      "reset"
+                    ],
+                    "propertiesConfig": [
+                      {
+                        "type": "string",
+                        "id": "castTypeName",
+                        "name": "Cast Type Name",
+                        "validations": [
+                          "required"
+                        ],
+                        "isVisible": true,
+                        "isEditable": true,
+                        "isListable": true,
+                        "isCreatable": true,
+                        "isFilterable": true,
+                        "isSearchable": true,
+                        "label": "Cast Type Name",
+                        "column": "castTypeName",
+                        "fieldType": "text",
+                        "hidden": false
+                      }
+                    ]
+                  }
+                },
+                "label": "Cast Type",
+                "column": "castType",
+                "hidden": false
+              }
+            ]
+          },
+          "label": "Casts",
+          "column": "casts",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ],
+      "submitSuccessRedirect": "/list-title"
+    }
+  },
+  "view-title": {
+    "pageTitle": "Title Details",
+    "pageType": "details",
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Back",
+        "url": "/list-title"
+      }
+    ],
+    "detailsPageConfig": {
+      "detailApiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "title",
+        "apiUrl": "/title"
+      },
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "titleName",
+          "name": "Title Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Title Name",
+          "column": "titleName",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "type": "string",
+          "id": "titleSummary",
+          "name": "Title Summary",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Title Summary",
+          "column": "titleSummary",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "fieldType": "wysiwyg",
+          "isListable": false,
+          "type": "list",
+          "id": "storyline",
+          "name": "Storyline",
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Storyline",
+          "column": "storyline",
+          "hidden": false
+        },
+        {
+          "fieldType": "date",
+          "type": "string",
+          "id": "releaseDate",
+          "name": "Release Date",
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Release Date",
+          "column": "releaseDate",
+          "hidden": false
+        },
+        {
+          "fieldType": "select",
+          "options": {
+            "apiUrl": "/titletype",
+            "apiMethod": "GET",
+            "responseKey": "items",
+            "optionMapping": {
+              "label": "titleTypeName",
+              "value": "titleTypeId"
+            }
+          },
+          "isListable": false,
+          "type": "string",
+          "id": "titleType",
+          "name": "Title Type",
+          "relation": {
+            "type": "many-to-one",
+            "identifiers": {
+              "source": "titleType",
+              "target": "titleTypeId"
+            },
+            "entity": "titleType"
+          },
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "addNewOption": {
+            "entityName": "titleType"
+          },
+          "label": "Title Type",
+          "column": "titleType",
+          "hidden": false,
+          "openInModal": {
+            "modalType": "details",
+            "modalPageConfig": {
+              "detailApiConfig": {
+                "apiMethod": "GET",
+                "responseKey": "titleType",
+                "apiUrl": "/titletype"
+              },
+              "propertiesConfig": [
+                {
+                  "type": "string",
+                  "id": "titleTypeName",
+                  "name": "Title Type Name",
+                  "validations": [
+                    "required"
+                  ],
+                  "isVisible": true,
+                  "isEditable": true,
+                  "isListable": true,
+                  "isCreatable": true,
+                  "isFilterable": true,
+                  "isSearchable": true,
+                  "label": "Title Type Name",
+                  "column": "titleTypeName",
+                  "fieldType": "text",
+                  "hidden": false
+                },
+                {
+                  "type": "string",
+                  "id": "description",
+                  "name": "Description",
+                  "validations": [
+                    "required"
+                  ],
+                  "isVisible": true,
+                  "isEditable": true,
+                  "isListable": true,
+                  "isCreatable": true,
+                  "isFilterable": true,
+                  "isSearchable": true,
+                  "label": "Description",
+                  "column": "description",
+                  "fieldType": "text",
+                  "hidden": false
+                }
+              ]
+            }
+          }
+        },
+        {
+          "fieldType": "select",
+          "options": {
+            "apiUrl": "/genre",
+            "apiMethod": "GET",
+            "responseKey": "items",
+            "optionMapping": {
+              "label": "genreName",
+              "value": "genreId"
+            }
+          },
+          "isListable": false,
+          "type": "string",
+          "id": "genre",
+          "name": "Genre",
+          "relation": {
+            "type": "many-to-one",
+            "identifiers": {
+              "source": "genre",
+              "target": "genreId"
+            },
+            "entity": "genre"
+          },
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "addNewOption": {
+            "entityName": "genre"
+          },
+          "label": "Genre",
+          "column": "genre",
+          "hidden": false,
+          "openInModal": {
+            "modalType": "details",
+            "modalPageConfig": {
+              "detailApiConfig": {
+                "apiMethod": "GET",
+                "responseKey": "genre",
+                "apiUrl": "/genre"
+              },
+              "propertiesConfig": [
+                {
+                  "type": "string",
+                  "id": "genreName",
+                  "name": "Genre Name",
+                  "validations": [
+                    "required"
+                  ],
+                  "isVisible": true,
+                  "isEditable": true,
+                  "isListable": true,
+                  "isCreatable": true,
+                  "isFilterable": true,
+                  "isSearchable": true,
+                  "label": "Genre Name",
+                  "column": "genreName",
+                  "fieldType": "text",
+                  "hidden": false
+                }
+              ]
+            }
+          }
+        },
+        {
+          "fieldType": "multi-select",
+          "options": {
+            "apiUrl": "/country",
+            "apiMethod": "GET",
+            "responseKey": "items",
+            "optionMapping": {
+              "label": "countryName",
+              "value": "countryId"
+            }
+          },
+          "isListable": false,
+          "type": "list",
+          "id": "country",
+          "name": "Country",
+          "relation": {
+            "type": "many-to-one",
+            "identifiers": {
+              "source": "country",
+              "target": "countryId"
+            },
+            "entity": "country"
+          },
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "addNewOption": {
+            "entityName": "country"
+          },
+          "label": "Country",
+          "column": "country",
+          "hidden": false,
+          "openInModal": {
+            "modalType": "details",
+            "modalPageConfig": {
+              "detailApiConfig": {
+                "apiMethod": "GET",
+                "responseKey": "country",
+                "apiUrl": "/country"
+              },
+              "propertiesConfig": [
+                {
+                  "type": "string",
+                  "id": "countryName",
+                  "name": "Country Name",
+                  "validations": [
+                    "required"
+                  ],
+                  "isVisible": true,
+                  "isEditable": true,
+                  "isListable": true,
+                  "isCreatable": true,
+                  "isFilterable": true,
+                  "isSearchable": true,
+                  "label": "Country Name",
+                  "column": "countryName",
+                  "fieldType": "text",
+                  "hidden": false
+                }
+              ]
+            }
+          }
+        },
+        {
+          "isListable": false,
+          "type": "list",
+          "id": "casts",
+          "name": "Casts",
+          "validations": [],
+          "isVisible": true,
+          "isEditable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "items": {
+            "type": "map",
+            "properties": [
+              {
+                "fieldType": "select",
+                "options": {
+                  "apiUrl": "/cast",
+                  "apiMethod": "GET",
+                  "responseKey": "items",
+                  "optionMapping": {
+                    "label": "castName",
+                    "value": "castId"
+                  }
+                },
+                "isListable": false,
+                "id": "cast",
+                "name": "Cast",
+                "relation": {
+                  "type": "many-to-one",
+                  "identifiers": {
+                    "source": "cast",
+                    "target": "castId"
+                  },
+                  "entity": "cast"
+                },
+                "validations": [],
+                "isVisible": true,
+                "isEditable": true,
+                "isCreatable": true,
+                "isFilterable": true,
+                "isSearchable": true,
+                "addNewOption": {
+                  "entityName": "cast"
+                },
+                "label": "Cast",
+                "column": "cast",
+                "hidden": false,
+                "openInModal": {
+                  "modalType": "details",
+                  "modalPageConfig": {
+                    "detailApiConfig": {
+                      "apiMethod": "GET",
+                      "responseKey": "cast",
+                      "apiUrl": "/cast"
+                    },
+                    "propertiesConfig": [
+                      {
+                        "type": "string",
+                        "id": "castName",
+                        "name": "Cast Name",
+                        "validations": [
+                          "required"
+                        ],
+                        "isVisible": true,
+                        "isEditable": true,
+                        "isListable": true,
+                        "isCreatable": true,
+                        "isFilterable": true,
+                        "isSearchable": true,
+                        "label": "Cast Name",
+                        "column": "castName",
+                        "fieldType": "text",
+                        "hidden": false
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "fieldType": "select",
+                "options": {
+                  "apiUrl": "/casttype",
+                  "apiMethod": "GET",
+                  "responseKey": "items",
+                  "optionMapping": {
+                    "label": "castTypeName",
+                    "value": "castTypeId"
+                  }
+                },
+                "isListable": false,
+                "id": "castType",
+                "name": "Cast Type",
+                "relation": {
+                  "type": "many-to-one",
+                  "identifiers": {
+                    "source": "castType",
+                    "target": "castTypeId"
+                  },
+                  "entity": "castType"
+                },
+                "validations": [],
+                "isVisible": true,
+                "isEditable": true,
+                "isCreatable": true,
+                "isFilterable": true,
+                "isSearchable": true,
+                "addNewOption": {
+                  "entityName": "castType"
+                },
+                "label": "Cast Type",
+                "column": "castType",
+                "hidden": false,
+                "openInModal": {
+                  "modalType": "details",
+                  "modalPageConfig": {
+                    "detailApiConfig": {
+                      "apiMethod": "GET",
+                      "responseKey": "castType",
+                      "apiUrl": "/casttype"
+                    },
+                    "propertiesConfig": [
+                      {
+                        "type": "string",
+                        "id": "castTypeName",
+                        "name": "Cast Type Name",
+                        "validations": [
+                          "required"
+                        ],
+                        "isVisible": true,
+                        "isEditable": true,
+                        "isListable": true,
+                        "isCreatable": true,
+                        "isFilterable": true,
+                        "isSearchable": true,
+                        "label": "Cast Type Name",
+                        "column": "castTypeName",
+                        "fieldType": "text",
+                        "hidden": false
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "label": "Casts",
+          "column": "casts",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "readOnly": true,
+          "isCreatable": false,
+          "isEditable": false,
+          "isListable": false,
+          "type": "string",
+          "id": "createdAt",
+          "name": "Created At",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Created At",
+          "column": "createdAt",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "readOnly": true,
+          "isCreatable": false,
+          "isEditable": false,
+          "isListable": false,
+          "type": "string",
+          "id": "updatedAt",
+          "name": "Updated At",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Updated At",
+          "column": "updatedAt",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ]
+    }
+  },
+  "list-titletype": {
+    "pageTitle": "TitleType Listing",
+    "pageType": "list",
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Create",
+        "url": "/create-titletype"
+      }
+    ],
+    "listPageConfig": {
+      "apiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "items",
+        "apiUrl": "/titletype"
+      },
+      "propertiesConfig": [
+        {
+          "readOnly": true,
+          "isVisible": false,
+          "isEditable": false,
+          "isCreatable": false,
+          "isIdentifier": true,
+          "type": "string",
+          "id": "titleTypeId",
+          "name": "Title Type Id",
+          "validations": [
+            "required"
+          ],
+          "isListable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "dataIndex": "titleTypeId",
+          "fieldType": "text",
+          "hidden": true,
+          "actions": [
+            {
+              "icon": "edit",
+              "url": "/edit-titletype"
+            },
+            {
+              "icon": "delete",
+              "openInModal": true,
+              "modalConfig": {
+                "modalType": "confirm",
+                "modalPageConfig": {
+                  "title": "Delete TitleType",
+                  "content": "Are you sure you want to delete this TitleType?"
+                },
+                "apiConfig": {
+                  "apiMethod": "DELETE",
+                  "responseKey": "titletype",
+                  "apiUrl": "/titletype"
+                },
+                "submitSuccessRedirect": "/list-titletype"
+              }
+            },
+            {
+              "icon": "view",
+              "url": "/view-titletype"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "id": "titleTypeName",
+          "name": "Title Type Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "dataIndex": "titleTypeName",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "type": "string",
+          "id": "description",
+          "name": "Description",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "dataIndex": "description",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ]
+    }
+  },
+  "create-titletype": {
+    "pageTitle": "Create TitleType",
+    "pageType": "form",
+    "cardStyle": {
+      "width": "50%"
+    },
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Back",
+        "url": "/list-titletype"
+      }
+    ],
+    "formPageConfig": {
+      "apiConfig": {
+        "apiMethod": "POST",
+        "responseKey": "titleType",
+        "apiUrl": "/titletype"
+      },
+      "formButtons": [
+        "submit",
+        "reset",
+        {
+          "text": "Cancel",
+          "url": "/list-titletype"
+        }
+      ],
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "titleTypeName",
+          "name": "Title Type Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Title Type Name",
+          "column": "titleTypeName",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "type": "string",
+          "id": "description",
+          "name": "Description",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Description",
+          "column": "description",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ],
+      "submitSuccessRedirect": "/list-titletype"
+    }
+  },
+  "edit-titletype": {
+    "pageTitle": "Update TitleType",
+    "pageType": "form",
+    "cardStyle": {
+      "width": "50%"
+    },
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "icon": "copy",
+        "label": "Duplicate",
+        "openInModal": true,
+        "modalConfig": {
+          "modalType": "confirm",
+          "modalPageConfig": {
+            "title": "Duplicate TitleType",
+            "content": "Are you sure you want to duplicate this TitleType?"
+          },
+          "apiConfig": {
+            "apiMethod": "GET",
+            "responseKey": "titletype",
+            "apiUrl": "/titletype/duplicate"
+          },
+          "submitSuccessRedirect": "/list-titletype"
+        }
+      },
+      {
+        "label": "Back",
+        "url": "/list-titletype"
+      }
+    ],
+    "formPageConfig": {
+      "apiConfig": {
+        "apiMethod": "PATCH",
+        "responseKey": "titleType",
+        "apiUrl": "/titletype"
+      },
+      "detailApiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "titleType",
+        "apiUrl": "/titletype"
+      },
+      "formButtons": [
+        "submit",
+        "reset",
+        {
+          "text": "Cancel",
+          "url": "/list-titletype"
+        }
+      ],
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "titleTypeName",
+          "name": "Title Type Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Title Type Name",
+          "column": "titleTypeName",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "type": "string",
+          "id": "description",
+          "name": "Description",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Description",
+          "column": "description",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ],
+      "submitSuccessRedirect": "/list-titletype"
+    }
+  },
+  "view-titletype": {
+    "pageTitle": "TitleType Details",
+    "pageType": "details",
+    "breadcrums": [],
+    "pageHeaderActions": [
+      {
+        "label": "Back",
+        "url": "/list-titletype"
+      }
+    ],
+    "detailsPageConfig": {
+      "detailApiConfig": {
+        "apiMethod": "GET",
+        "responseKey": "titleType",
+        "apiUrl": "/titletype"
+      },
+      "propertiesConfig": [
+        {
+          "type": "string",
+          "id": "titleTypeName",
+          "name": "Title Type Name",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Title Type Name",
+          "column": "titleTypeName",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "type": "string",
+          "id": "description",
+          "name": "Description",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isEditable": true,
+          "isListable": true,
+          "isCreatable": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Description",
+          "column": "description",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "readOnly": true,
+          "isCreatable": false,
+          "isEditable": false,
+          "isListable": false,
+          "type": "string",
+          "id": "createdAt",
+          "name": "Created At",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Created At",
+          "column": "createdAt",
+          "fieldType": "text",
+          "hidden": false
+        },
+        {
+          "readOnly": true,
+          "isCreatable": false,
+          "isEditable": false,
+          "isListable": false,
+          "type": "string",
+          "id": "updatedAt",
+          "name": "Updated At",
+          "validations": [
+            "required"
+          ],
+          "isVisible": true,
+          "isFilterable": true,
+          "isSearchable": true,
+          "label": "Updated At",
+          "column": "updatedAt",
+          "fieldType": "text",
+          "hidden": false
+        }
+      ]
+    }
+  }
+}
