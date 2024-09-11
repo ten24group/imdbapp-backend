@@ -13,7 +13,11 @@
     "synth:local": "npm run build:layer && env-cmd -f .env.local cdk synth",
     "deploy:local": "npm run build:layer && env-cmd -f .env.local cdk deploy",
     "watch:local": "npm run build:layer && env-cmd -f .env.local cdk watch",
-    "destroy:local": "env-cmd -f .env.local cdk destroy"
+    "destroy:local": "env-cmd -f .env.local cdk destroy",
+    "build:layer:localstack": "env-cmd -f .env.localstack esbuild --bundle --platform=node --sourcemap ./node_modules/@ten24group/fw24/dist/package/layer/fw24.js --outdir=dist/layer/nodejs/node_modules/@ten24group --external:@aws-sdk",
+    "synth:localstack": "npm run build:layer:localstack && env-cmd -f .env.localstack cdklocal synth",
+    "deploy:localstack": "npm run build:layer:localstack && env-cmd -f .env.localstack cdklocal deploy",
+    "bootstrap:localstack": "env-cmd -f .env.localstack cdklocal bootstrap"
   },
   "devDependencies": {
     "@aws-sdk/client-dynamodb": "^3.649.0",

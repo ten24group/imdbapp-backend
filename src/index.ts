@@ -185,7 +185,7 @@ const app = new Application({
 	}
 })
 .use(api)
-.use(amplify)
+// .use(amplify)
 .use(s3UIConfig)
 .use(s3withbucket1handler)
 .use(s3)
